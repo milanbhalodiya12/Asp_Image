@@ -1,0 +1,13 @@
+﻿@model imgAdvancedaspnet.Models.Student
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.TextBoxFor(m => m.Id)
+    <input type="file" name="img" id="img"  />
+    <input type="submit" name="submit" value="submit" />
+}
+
